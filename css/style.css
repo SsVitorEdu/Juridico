@@ -1,0 +1,314 @@
+/* Arquivo: C:\xampp\htdocs\juridico\css\style.css */
+
+:root {
+    --bg: #f3f4f6;
+    --card: #fff;
+    --line: #e5e7eb;
+    --text: #111827;
+    --muted: #6b7280;
+    --primary: #0e4b8c;
+    --primary-2: #0b3a6b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* --- ESTILO DO CABEÇALHO (ATUALIZADO) --- */
+.main-header {
+    background-color: var(--card);
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Classe para agrupar o logo e o nome do portal */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o logo e o texto */
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+/* O estilo exato que você me passou para o logo "RW" */
+.brand .logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+    color: #fff;
+    font-weight: 800;
+}
+
+.user-info span {
+    margin-right: 15px;
+}
+
+.user-info a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 15px;
+}
+.user-info a:hover {
+    color: var(--primary);
+}
+
+
+/* --- ESTILO DO CONTEÚDO E FORMULÁRIO (sem alterações) --- */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.form-card {
+    padding: 24px;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--primary-2);
+}
+
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid;
+}
+
+.message-success {
+    color: #059669;
+    background-color: #D1FAE5;
+    border-color: #6EE7B7;
+}
+
+.message-error {
+    color: #b91c1c;
+    background-color: #FEE2E2;
+    border-color: #FCA5A5;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Um cinza neutro */
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Para alinhar os botões */
+.form-actions {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 10px;
+}
+
+/* Adicionar no final de style.css */
+
+/* --- ESTILOS PARA A PÁGINA DE DETALHES (solicitacao_view.php) --- */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.details-card, .followup-card {
+    background-color: var(--card);
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.details-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 15px;
+}
+
+.details-info p {
+    margin: 0 0 10px 0;
+    color: var(--muted);
+}
+
+.details-info p strong {
+    color: var(--text);
+}
+
+/* --- ESTILOS PARA O SISTEMA DE FOLLOW-UP (Inspirado na imagem) --- */
+.followup-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.followup-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f9fafb; /* Cinza bem claro de fundo */
+    border-radius: 8px;
+}
+
+.followup-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0; /* Impede que o avatar encolha */
+}
+
+.followup-content {
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+.followup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.followup-header .author {
+    font-weight: 600;
+}
+
+.followup-header .timestamp {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.followup-body {
+    color: var(--text);
+}
+
+.add-followup-form {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.page-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.btn-danger {
+    background-color: #DC3545;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+}
+.btn-success {
+    background-color: #28a745;
+}
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.anexos-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.anexo-item a {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.anexo-item a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILO PARA O PAINEL DE AÇÕES DO JURÍDICO --- */
+.juridico-actions-card {
+    background-color: #FFFBEB; /* Um amarelo claro para chamar a atenção */
+    border: 1px solid #FBBF24;
+    padding: 24px;
+    border-radius: 8px;
+}
+.juridico-actions-card h3 {
+    margin-top: 0;
+    color: #92400E;
+}
+.juridico-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: flex-end;
+}

@@ -1,0 +1,1 @@
+eu preciso adicionar um calendario no Painel de Controle juridico o botão para ir para o calendari pode ficar no cabeçalo do lado diretio mas ele tem que tem todos, nesse calendario deve ser igual esse que eu te mandei nele deve ter todas as solicitações do juridico, ao pertar no dia mostra as informações da solicitaçõs 
